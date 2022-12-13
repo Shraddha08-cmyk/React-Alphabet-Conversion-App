@@ -3,14 +3,19 @@ import {useState} from 'react'
 function Textarea(props) {
     
     const handleUpClick = () => {
-        console.log("Onclick Fired");
+        // console.log("Onclick Fired");
         let newText = text.toUpperCase();
         setText(newText);
     }
 
     const handleLoClick = () => {
-        console.log("Onclick Fired");
+        // console.log("Onclick Fired");
         let newText = text.toLowerCase();
+        setText(newText);
+    }
+
+    const handleClearClick = () => {
+        let newText = '';
         setText(newText);
     }
 
@@ -29,7 +34,8 @@ function Textarea(props) {
            <textarea className="form-control" value={text} onChange={handleOnChange} id="exampleFormControlTextarea1" rows="8"></textarea>
         </div>
         <button className="btn btn-primary" onClick={handleUpClick}>Convert To Uppercase</button> &nbsp; &nbsp; &nbsp;
-        <button className="btn btn-primary" onClick={handleLoClick}>Convert To Lowercase</button>
+        <button className="btn btn-primary" onClick={handleLoClick}>Convert To Lowercase</button> &nbsp; &nbsp; &nbsp;
+        <button className="btn btn-primary" onClick={handleClearClick}>Clear Text</button>
 
         <div className="container">
             <h1>Text Summary</h1>
