@@ -28,8 +28,16 @@ function Textarea(props) {
         <div className="mb-3">
            <textarea className="form-control" value={text} onChange={handleOnChange} id="exampleFormControlTextarea1" rows="8"></textarea>
         </div>
-        <button className="btn-primary" onClick={handleUpClick}>Convert To Uppercase</button> &nbsp; &nbsp; &nbsp; &nbsp;
-        <button className="btn-secondary" onClick={handleLoClick}>Convert To Lowercase</button>
+        <button className="btn btn-primary" onClick={handleUpClick}>Convert To Uppercase</button> &nbsp; &nbsp; &nbsp;
+        <button className="btn btn-primary" onClick={handleLoClick}>Convert To Lowercase</button>
+
+        <div className="container">
+            <h1>Text Summary</h1>
+            <p>{text.split(" ").length} Words and {text.length} Character</p>
+            <p>{0.008 * text.split(" ").length} Minutes Read</p>
+            <h3>Preview</h3>
+            <p>{text}</p>
+        </div>
         </>
     )
 }
