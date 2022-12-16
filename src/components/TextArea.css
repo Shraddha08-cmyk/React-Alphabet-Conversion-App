@@ -9,6 +9,7 @@ body {
     width: 50%;
     border-radius: 30px 1px rgb(118, 118, 243);
     background: transparent;
+    opacity: 0.5;
 }
 
 .cont {
